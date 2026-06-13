@@ -549,7 +549,7 @@ module.exports = {
   name: 'messageCreate',
   async execute(message, client) {
     if (message.author.bot) return;
-    if (!message.content.startsWith('$')) return;
+    if (!message.content.startsWith(',')) return;
 
     const args = message.content.slice(1).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
